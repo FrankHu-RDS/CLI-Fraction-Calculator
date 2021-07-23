@@ -3,14 +3,14 @@ Hello, welcome to the CLI fraction processor.
 A command-line program that will take equations with whole numbers/mixed numbers/fractions as an input and produce a fractional result.
 
 ## Information regarding calculator
-    Legal operators shall be *, /, +, - (multiply, divide, add, subtract)
-    Operands and operators shall be separated by one or more spaces
-    Mixed numbers will be represented by whole_numerator/denominator. e.g. "3_1/4"
-    Improper fractions and whole numbers are also allowed as operands 
-    Only two operands are allowed
+Legal operators shall be *, /, +, - (multiply, divide, add, subtract)
+Operands and operators shall be separated by one or more spaces
+Mixed numbers will be represented by whole_numerator/denominator. e.g. "3_1/4"
+Improper fractions and whole numbers are also allowed as operands 
+Only two operands are allowed
 
 ## Usage:
-    The -h command will show the below dialogue.
+The -h command will show the below dialogue.
 
     Usage: process [-h] [--loglevel {debug,info,warning,error,critical}]
                 {how-to,calc} {equation}
@@ -26,8 +26,8 @@ A command-line program that will take equations with whole numbers/mixed numbers
                                      Log level
 
 ## Setup environment and run
-    Be sure to be using versions of python3 and up to handle negative numbers properly. This is discussed in the known-issues section.
-    The commands to setup and run this program are below, with the present working directory being argparse.
+Be sure to be using versions of python3 and up to handle negative numbers properly. This is discussed in the known-issues section.
+The commands to setup and run this program are below, with the present working directory being argparse.
         python -m pip install -e .
         python -m process how-to
         python -m process -h
@@ -94,32 +94,32 @@ A command-line program that will take equations with whole numbers/mixed numbers
     python -m process calc '0 - 1_4/10'
          Output:   '-1_4/10'
 
-## Edge Cases Tested:
-    main(['calc', '2/3 / 0']
-    main(['calc', '2/3 / 1/0']
-    main(['calc']
-    main(['calc', 'asdf']
-    main(['calc', 'asdf asdf asdf']
-    main(['calc', '2_10 / 2']
-    main(['calc', '10 asdf 10']
+## Edge Cases Tested: (See edge test cases file for more details)
+    python -m process calc '2/3 / 0'
+    python -m process calc '2/3 / 1/0'
+    python -m process calc 
+    python -m process calc 'asdf'
+    python -m process calc 'asdf asdf asdf'
+    python -m process calc '2_10 / 2'
+    python -m process calc  '10 asdf 10'
 
 ## Loglevel details:
-    There are also different loglevels utilized. I utilized loglevel debug to track debugging the system.
+There are also different loglevels utilized. I utilized loglevel debug to track debugging the system.
     Example run: python -m process --loglevel debug calc '2_3/8 + 9/8'
 
 ## Testing
-    In process > cli > tests, you will find all unit tests for this program. 
-    To run the tests use the command below while in the argparse directory.
-        python -m pytest -v
+In process > cli > tests, you will find all unit tests for this program. 
+To run the tests use the command below while in the argparse directory.
+    python -m pytest -v
 
 ## Known Issues
-    In order for negative numbers to work properly, you will need to use python3 versions and up.
-    This is because of a known python2 division discrepancy found here : https://www.python.org/dev/peps/pep-0238/
-    
-    For example when you do 8/-7, you will receive -2 in python2, however you will receive -1 in python3.
-    This is because it the result is using integer division and is being rounded down toward the more negative value of -2. (This is also known as "Floor division")
+In order for negative numbers to work properly, you will need to use python3 versions and up.
+This is because of a known python2 division discrepancy found here : https://www.python.org/dev/peps/pep-0238/
 
-    In order to get proper results, using python3 is suggested.
+For example when you do 8/-7, you will receive -2 in python2, however you will receive -1 in python3.
+This is because it the result is using integer division and is being rounded down toward the more negative value of -2. (This is also known as "Floor division")
+
+In order to get proper results, using python3 is suggested.
 
 
 
