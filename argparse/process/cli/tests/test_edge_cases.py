@@ -64,3 +64,9 @@ def test_main_calculation_cannot_divide_by_zero_denominator_numerator(capsys):
     assert ret == 0
     assert 'error cannot divide by 0' in out
     # assert 'process calc: error: the following arguments are required: equation' in err
+def test_main_calculation_cannot_divide_by_zero_numerator_fraction(capsys):
+    ret = main(['calc', '10/0 / 2'])
+    out, err = capsys.readouterr()
+    assert ret == 0
+    assert 'error cannot divide by 0' in out
+    # assert 'process calc: error: the following arguments are required: equation' in err
