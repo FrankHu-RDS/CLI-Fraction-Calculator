@@ -3,11 +3,11 @@ Hello, welcome to the CLI fraction processor.
 A command-line program that will take equations with whole numbers/mixed numbers/fractions as an input and produce a fractional result.
 
 ## Information regarding calculator
-Legal operators shall be *, /, +, - (multiply, divide, add, subtract)
-Operands and operators shall be separated by one or more spaces
-Mixed numbers will be represented by whole_numerator/denominator. e.g. "3_1/4"
-Improper fractions and whole numbers are also allowed as operands 
-Only two operands are allowed
+    Legal operators shall be *, /, +, - (multiply, divide, add, subtract)
+    Operands and operators shall be separated by one or more spaces
+    Mixed numbers will be represented by whole_numerator/denominator. e.g. "3_1/4"
+    Improper fractions and whole numbers are also allowed as operands 
+    Only two operands are allowed
 
 ## Usage:
 The -h command will show the below dialogue.
