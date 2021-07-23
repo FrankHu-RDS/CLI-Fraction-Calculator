@@ -27,7 +27,9 @@ The -h command will show the below dialogue.
 
 ## Setup environment and run
 Be sure to be using versions of python3 and up to handle negative numbers properly. This is discussed in the known-issues section.
+
 The commands to setup and run this program are below, with the present working directory being argparse.
+        
         python -m pip install -e .
         python -m process how-to
         python -m process -h
