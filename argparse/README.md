@@ -105,11 +105,14 @@ The commands to setup and run this program are below, with the present working d
 
 ## Loglevel details:
 There are also different loglevels utilized. I utilized loglevel debug to track debugging the system.
+    
     Example run: python -m process --loglevel debug calc '2_3/8 + 9/8'
 
 ## Testing
 In process > cli > tests, you will find all unit tests for this program. 
+
 To run the tests use the command below while in the argparse directory.
+    
     python -m pytest -v
 
 ## Known Issues
