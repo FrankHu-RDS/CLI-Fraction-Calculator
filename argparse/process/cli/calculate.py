@@ -183,7 +183,7 @@ def calc(args):
     try:
         numerator_0, denominator_0 = process_fraction(equation_parsed[0])
         numerator_1, denominator_1 = process_fraction(equation_parsed[2])
-        if denominator_1 == '0' or denominator_0 == '0':
+        if denominator_1 == '0' or denominator_0 == '0' or numerator_1 == '0':
             sys.stdout.write('error cannot divide by 0')
             return
         int(numerator_0)

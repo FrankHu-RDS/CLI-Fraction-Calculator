@@ -57,3 +57,10 @@ def test_main_calculation_incorrect_input_3(capsys):
     assert ret == 0
     assert 'The equation was improperly formatted, please put in a correctly formatted equation' in out
     # assert 'process calc: error: the following arguments are required: equation' in err
+
+def test_main_calculation_cannot_divide_by_zero_denominator_numerator(capsys):
+    ret = main(['calc', '10 / 0/20'])
+    out, err = capsys.readouterr()
+    assert ret == 0
+    assert 'error cannot divide by 0' in out
+    # assert 'process calc: error: the following arguments are required: equation' in err
